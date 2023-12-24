@@ -26,14 +26,14 @@ module.exports = {
                 'fit-1fr': 'fit-content(100%) 1fr',
             },
             colors: {
-                mainBlue: '#3360FF',
+                mainBlue: '#3F47FF',
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
                 ring: 'hsl(var(--ring))',
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 primary: {
-                    DEFAULT: '#3360FF',
+                    DEFAULT: '#3F47FF',
                     foreground: 'hsl(var(--primary-foreground))',
                 },
                 secondary: {

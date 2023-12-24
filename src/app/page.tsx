@@ -1,3 +1,9 @@
+import HeroSection from '~components/organisms/HeroSection';
+
 export default function Home() {
-    return <main>{'test'}</main>;
+    return (
+        <main className='bg-[#FAFAF9]'>
+            <HeroSection />
+        </main>
+    );
 }
