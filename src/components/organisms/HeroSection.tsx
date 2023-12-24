@@ -1,7 +1,7 @@
 const HeroSection = () => {
     return (
         <section className="flex items-center justify-center h-[100vh]">
-            <div className="flex flex-col justify-center items-center gap-8 p-4">
+            <div className="flex flex-col justify-center items-center gap-8">
                 <span className="text-5xl xs:text-7xl text-center font-bold max-w-[750px]">
                     {'Talent hunt outsourcing service'}
                 </span>
