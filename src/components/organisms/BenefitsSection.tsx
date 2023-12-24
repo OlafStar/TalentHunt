@@ -1,7 +1,7 @@
 const BenefitsSection = () => {
     return (
         <section className="py-20 flex flex-col justify-center items-center gap-16">
-            <p className="font-bold text-7xl text-center max-w-[800px]">
+            <p className="font-bold text-4xl md:text-7xl text-center max-w-[800px]">
                 {'TalentHunt replace all expensive agencies'}
             </p>
             <div className="grid grid-cols-2">
