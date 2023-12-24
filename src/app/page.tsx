@@ -2,7 +2,7 @@ import HeroSection from '~components/organisms/HeroSection';
 
 export default function Home() {
     return (
-        <main className='bg-[#FAFAF9]'>
+        <main className='relative z-[2]'>
             <HeroSection />
         </main>
     );
