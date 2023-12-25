@@ -26,17 +26,17 @@ const SubscriptionSection = () => {
                         <p>{'Team members.'}</p>
                         <p>{'Pause or cancel any time.'}</p>
                     </div>
-                    <div className='absolute text-mainBlue text-7xl font-bold right-[24px] top-[16px]'>{'999$/m'}</div>
+                    <div className='mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]'>{'999$/m'}</div>
                     <button className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]">
                         {'Start today'}
                     </button>
                 </BentoBox>
-                <BentoBox className="flex flex-col gap-2 justify-center items-center p-6 font-bold">
+                <BentoBox className="grid-area-3 flex flex-col gap-2 justify-center items-center p-6 font-bold">
                     <p className="text-xl sm:text-2xl ">{'IT Talents'}</p>
                     <p className="text-mainBlue text-4xl sm:text-6xl">{'5000+'}</p>
                     <p className="text-xl sm:text-2xl">{'in our base'}</p>
                 </BentoBox>
-                <BentoBox className="flex items-center justify-center p-4">
+                <BentoBox className="grid-area-4 flex items-center justify-center p-4">
                     <p className="text-xl sm:text-2xl font-bold max-w-[190px] text-center">
                         {`We are `}
                         <span className="text-mainBlue">{`cheaper `}</span>{' '}
@@ -54,19 +54,19 @@ const SubscriptionSection = () => {
                         <p>{'Quicker recruitment process.'}</p>
                         <p>{'Priority for candidates from our talent base.'}</p>
                     </div>
-                    <div className='absolute text-mainBlue text-7xl font-bold right-[24px] top-[16px]'>{'1999$/m'}</div>
+                    <div className='mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]'>{'1999$/m'}</div>
                     <button className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]">
                         {'Start today'}
                     </button>
                 </BentoBox>
-                <BentoBox className="p-4 flex items-center justify-center">
+                <BentoBox className="grid-area-5 p-4 flex items-center justify-center">
                     <p className="text-xl sm:text-2xl font-bold text-center">
                         {`Includes `}
                         <span className="text-mainBlue">{`technical interviews `}</span>
                         {`for IT and developers`}
                     </p>
                 </BentoBox>
-                <BentoBox className="p-4 flex justify-center items-center">
+                <BentoBox className="grid-area-6 p-4 flex justify-center items-center">
                     <div className="flex flex-col text-center">
                         <p className="text-mainBlue font-bold text-2xl sm:text-3xl">
                             {'FIXED PRICE'}

@@ -3,6 +3,7 @@ import DescriptionsSection from '~components/organisms/DescriptionsSection';
 import FaqSection from '~components/organisms/FaqSection';
 import HeroSection from '~components/organisms/HeroSection';
 import SubscriptionSection from '~components/organisms/SubscriptionSection';
+import TextSection from '~components/organisms/TextSection';
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <BenefitsSection />
             <SubscriptionSection />
             <FaqSection />
+            <TextSection />
         </main>
     );
 }

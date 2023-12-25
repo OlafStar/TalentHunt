@@ -99,6 +99,27 @@
         scrollbar-width: none; /* Firefox */
     }
 
+    .grid-area-3 {
+        @media (max-width: 1024px) {
+            grid-area: 3;
+        }
+    }
+    .grid-area-4 {
+        @media (max-width: 1024px) {
+            grid-area: 4;
+        }
+    }
+    .grid-area-5 {
+        @media (max-width: 1024px) {
+            grid-area: 5;
+        }
+    }
+    .grid-area-6 {
+        @media (max-width: 1024px) {
+            grid-area: 6;
+        }
+    }
+
     .gradient {
         &::before,
         &::after {
