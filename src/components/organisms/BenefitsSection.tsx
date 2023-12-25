@@ -1,11 +1,21 @@
+import Image from 'next/image';
+
 const BenefitsSection = () => {
     return (
-        <section className="py-20 flex flex-col justify-center items-center gap-16">
+        <section className="py-20 flex flex-col justify-center items-center gap-16 relative">
             <p className="font-bold text-4xl md:text-7xl text-center max-w-[800px]">
                 {'TalentHunt replace all expensive agencies'}
             </p>
-            <div className="grid grid-cols-2">
-                <div></div>
+            <div className="grid lg:grid-cols-2 gap-20 lg:gap-4">
+                <div className='flex items-center'>
+                    <Image
+                        src={'/grow.svg'}
+                        alt={'Grow of your business'}
+                        width={600}
+                        height={600}
+                        className="w-auto h-auto"
+                    />
+                </div>
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-4">
                         <p className="text-3xl text-[32px] font-bold">
@@ -18,7 +28,9 @@ const BenefitsSection = () => {
                         </p>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <p className="text-3xl text-[32px] font-bold">{'Satisfy guarantee'}</p>
+                        <p className="text-3xl text-[32px] font-bold">
+                            {'Satisfy guarantee'}
+                        </p>
                         <p className="text-2xl">
                             {
                                 'We guarantee to find the best candidate for your position and work until you are fully satisfied.'
