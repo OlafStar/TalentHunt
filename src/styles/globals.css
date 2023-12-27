@@ -75,8 +75,18 @@
     * {
         @apply border-border;
     }
+    html {
+        --scroll-behavior: smooth !important;
+        scroll-behavior: smooth !important;
+    }
     body {
         @apply bg-background text-foreground;
+    }
+    *,
+    *::before,
+    *::after {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
 

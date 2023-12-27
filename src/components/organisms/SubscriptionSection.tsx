@@ -3,7 +3,7 @@ import BentoBox from '~components/molecues/BentoBox';
 
 const SubscriptionSection = () => {
     return (
-        <section className="py-40">
+        <section id="pricing" className="py-40">
             <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-[118px_117px_232px_232px_235px] gap-4">
                 <BentoBox className="lg:col-span-2 font-bold text-2xl sm:text-3xl lg:text-5xl flex items-center justify-center p-4 lg:p-0">
                     {'Subscription Offers'}
@@ -21,7 +21,7 @@ const SubscriptionSection = () => {
                 </BentoBox>
                 <BentoBox className="lg:col-span-2 lg:row-span-2 py-4 px-6 flex flex-col justify-between relative">
                     <p className="text-3xl font-bold">{'Standard'}</p>
-                    <div className="flex flex-col gap-3 sm:text-2xl py-6 lg:p-0">
+                    <div className="flex flex-col gap-3 lg:text-xl 2xl:text-2xl py-6 lg:p-0">
                         <p>{'Unlimited requests.'}</p>
                         <p>{'Satisfy guarantee.'}</p>
                         <p>{'Team members.'}</p>
@@ -52,7 +52,7 @@ const SubscriptionSection = () => {
                 </BentoBox>
                 <BentoBox className="lg:col-span-2 lg:row-span-2 py-4 px-6 flex flex-col justify-between relative">
                     <p className="text-3xl font-bold">{'Platinum'}</p>
-                    <div className="flex flex-col gap-3 sm:text-2xl py-6 lg:p-0">
+                    <div className="flex flex-col gap-3 lg:text-xl 2xl:text-2xl py-6 lg:p-0">
                         <p>{'Unlimited requests.'}</p>
                         <p>{'Satisfy guarantee.'}</p>
                         <p>{'Team members.'}</p>

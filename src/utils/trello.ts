@@ -12,13 +12,10 @@ export const createTrelloBoard = async (name: string) => {
                 method: 'POST',
             },
         );
-        console.log(
-            `Trello board creation response: ${response.status} ${response.statusText}`,
-        );
 
         const data = await response.json();
         boardId = data.id;
-        console.log('Trello board created:', data);
+        console.log('Trello board created:');
     } catch (err) {
         console.error('Error creating Trello board:', err);
     }
@@ -45,6 +42,5 @@ export const addMemberToTrello = async (
             console.log(`Response: ${response.status} ${response.bodyUsed}`);
             return response.text();
         })
-        .then((text) => console.log(text))
         .catch((err) => console.error(err));
 };

@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 
 import '~/styles/globals.css';
+import Navigation from '~components/molecues/Navigation';
 import SiteBackground from '~components/organisms/SiteBackground';
 import {generalSans} from '~fonts/generalSans';
 
@@ -13,6 +14,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
         <html lang="en">
             <body className={`${generalSans.className} bg-[#FAFAF9]`}>
+                <Navigation />
                 {children}
                 <SiteBackground />
             </body>

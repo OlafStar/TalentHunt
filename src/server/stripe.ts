@@ -20,8 +20,8 @@ export const createStripeSession = async (lookup: string) => {
             },
         ],
         mode: 'subscription',
-        success_url: `${DOMAIN}/?success=true&session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${DOMAIN}?canceled=true`,
+        success_url: `${DOMAIN}/payment?success=true&session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${DOMAIN}/payment?canceled=true`,
     });
 
     if (session.url) {

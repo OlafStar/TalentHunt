@@ -4,7 +4,7 @@ import {faq} from '~config/faq';
 
 const FaqSection = () => {
     return (
-        <section className="flex flex-col gap-10 sm:gap-20 justify-center items-center py-20">
+        <section id="faq"className="flex flex-col gap-10 sm:gap-20 justify-center items-center py-20">
             <div className="font-bold text-6xl">{'FAQ'}</div>
 
             <div className="max-w-[750px] w-full">

@@ -28,9 +28,6 @@ export async function POST(request: Request) {
     if (event.type === 'checkout.session.completed') {
         console.log('Creating Trello board...');
 
-        let boardId: string | undefined = undefined;
-
-
         console.log(
             session.customer_details?.name,
             session.customer_details?.email,
@@ -38,15 +35,12 @@ export async function POST(request: Request) {
         );
 
         if (session.customer_details?.name && session.customer_details.email) {
-            boardId = await createTrelloBoard(session.customer_details.name);
-
-            const bodyData = {fullName: session.customer_details?.name};
-
-            await addMemberToTrello(
-                boardId as string,
-                session.customer_details.email,
-                bodyData,
-            );
+            await createTrelloBoard(session.customer_details.name).then((id) => {
+                const bodyData = {fullName: session.customer_details?.name};
+                if (id) {
+                    addMemberToTrello(id, session.customer_details.email, bodyData);
+                }
+            });
         }
     }
 
