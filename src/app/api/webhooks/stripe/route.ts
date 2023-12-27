@@ -40,7 +40,7 @@ export async function POST(request: Request) {
         );
 
         try {
-            fetch(
+            await fetch(
                 `https://api.trello.com/1/boards/?name=${
                     customer && 'name' in customer ? customer.name : subscription.id
                 }&key=${process.env.TRELLO_API}&token=${process.env.TRELLO_TOKEN}`,
