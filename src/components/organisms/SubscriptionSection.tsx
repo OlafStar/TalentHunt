@@ -1,3 +1,4 @@
+import PricingButton from '~components/atoms/PricingButton';
 import BentoBox from '~components/molecues/BentoBox';
 
 const SubscriptionSection = () => {
@@ -26,10 +27,15 @@ const SubscriptionSection = () => {
                         <p>{'Team members.'}</p>
                         <p>{'Pause or cancel any time.'}</p>
                     </div>
-                    <div className='mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]'>{'999$/m'}</div>
-                    <button className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]">
+                    <div className="mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]">
+                        {'999$/m'}
+                    </div>
+                    <PricingButton
+                        lookup="standard_talenthunt_price"
+                        className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]"
+                    >
                         {'Start today'}
-                    </button>
+                    </PricingButton>
                 </BentoBox>
                 <BentoBox className="grid-area-3 flex flex-col gap-2 justify-center items-center p-6 font-bold">
                     <p className="text-xl sm:text-2xl ">{'IT Talents'}</p>
@@ -54,10 +60,15 @@ const SubscriptionSection = () => {
                         <p>{'Quicker recruitment process.'}</p>
                         <p>{'Priority for candidates from our talent base.'}</p>
                     </div>
-                    <div className='mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]'>{'1999$/m'}</div>
-                    <button className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]">
+                    <div className="mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]">
+                        {'1999$/m'}
+                    </div>
+                    <PricingButton
+                        lookup="platinum_talenthunt_price"
+                        className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]"
+                    >
                         {'Start today'}
-                    </button>
+                    </PricingButton>
                 </BentoBox>
                 <BentoBox className="grid-area-5 p-4 flex items-center justify-center">
                     <p className="text-xl sm:text-2xl font-bold text-center">
