@@ -8,14 +8,14 @@ import {generalSans} from '~fonts/generalSans';
 export const metadata: Metadata = {
     title: 'TalentHunting - Recruitment as a Service',
     description:
-        'TalentHunt - Recruitment as a service. Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
+        'Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
     icons: {
         icon: '/icon.svg',
     },
     openGraph: {
         title: 'TalentHunting - Recruitment as a Service',
         description:
-            'TalentHunt - Recruitment as a service. Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
+            'Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
         url: `${process.env.NEXT_PUBLIC_DOMAIN}`,
         images: [
             {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     twitter: {
         title: 'TalentHunting - Recruitment as a Service',
         description:
-            'TalentHunt - Recruitment as a service. Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
+            'Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
         images: [
             {
                 url: `${process.env.NEXT_PUBLIC_DOMAIN}opg.jpg`,
