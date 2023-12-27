@@ -39,20 +39,18 @@ export async function POST(request: Request) {
             subscription.customer as string,
         );
 
-        fetch(
-            `https://api.trello.com/1/boards/?name=${
-              customer && 'name' in customer ? customer.name : subscription.id
-            }&key=${process.env.TRELLO_API}&token=${process.env.TRELLO_TOKEN}`,
-            {
-                method: 'POST',
-            },
-        )
-            .then((response) => {
-                console.log(`Response: ${response.status} ${response.statusText}`);
-                return response.text();
-            })
-            .then((text) => console.log(text))
-            .catch((err) => console.error(err));
+        try {
+            fetch(
+                `https://api.trello.com/1/boards/?name=${
+                    customer && 'name' in customer ? customer.name : subscription.id
+                }&key=${process.env.TRELLO_API}&token=${process.env.TRELLO_TOKEN}`,
+                {
+                    method: 'POST',
+                },
+            );
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     // if (event.type === 'invoice.payment_succeeded') {
