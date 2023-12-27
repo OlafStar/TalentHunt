@@ -2,6 +2,7 @@ import {headers} from 'next/headers';
 import type Stripe from 'stripe';
 
 import {stripe} from '~/lib/stripe';
+import {addMemberToTrello, createTrelloBoard} from '~utils/trello';
 
 export async function POST(request: Request) {
     const body = await request.text();
@@ -22,58 +23,32 @@ export async function POST(request: Request) {
         );
     }
 
-    const session = event.data.object as Stripe.Checkout.Session;
-
-    if (!session?.metadata?.userId) {
-        return new Response(null, {
-            status: 200,
-        });
-    }
+    const session = event.data.object as any;
 
     if (event.type === 'checkout.session.completed') {
-        const subscription = await stripe.subscriptions.retrieve(
-            session.subscription as string,
+        console.log('Creating Trello board...');
+
+        let boardId: string | undefined = undefined;
+
+
+        console.log(
+            session.customer_details?.name,
+            session.customer_details?.email,
+            session.customer_details?.name && session.customer_details.email,
         );
 
-        const customer = await stripe.customers.retrieve(
-            subscription.customer as string,
-        );
+        if (session.customer_details?.name && session.customer_details.email) {
+            boardId = await createTrelloBoard(session.customer_details.name);
 
-        try {
-            await fetch(
-                `https://api.trello.com/1/boards/?name=${
-                    customer && 'name' in customer ? customer.name : subscription.id
-                }&key=${process.env.TRELLO_API}&token=${process.env.TRELLO_TOKEN}`,
-                {
-                    method: 'POST',
-                },
+            const bodyData = {fullName: session.customer_details?.name};
+
+            await addMemberToTrello(
+                boardId as string,
+                session.customer_details.email,
+                bodyData,
             );
-        } catch (err) {
-            console.log(err);
         }
     }
-
-    // if (event.type === 'invoice.payment_succeeded') {
-
-    // }
-
-    // if (event.type === 'customer.subscription.deleted') {
-    //     // Retrieve the subscription details from Stripe.
-    //     const subscription = event.data.object as Stripe.Subscription;
-
-    //     fetch(
-    //         'https://api.trello.com/1/lists/{id}/closed?key=APIKey&token=APIToken',
-    //         {
-    //             method: 'PUT',
-    //         },
-    //     )
-    //         .then((response) => {
-    //             console.log(`Response: ${response.status} ${response.statusText}`);
-    //             return response.text();
-    //         })
-    //         .then((text) => console.log(text))
-    //         .catch((err) => console.error(err));
-    // }
 
     return new Response(null, {status: 200});
 }
