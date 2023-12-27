@@ -38,12 +38,11 @@ export async function POST(request: Request) {
         const customer = await stripe.customers.retrieve(
             subscription.customer as string,
         );
+
         fetch(
-            `https://api.trello.com/1/lists?name=${
+            `https://api.trello.com/1/boards/?name=${
                 customer.name || subscription.id
-            }&idBoard=${process.env.TRELLO_BOARD_ID}=${process.env.TRELLO_API}&token=${
-                process.env.TRELLO_TOKEN
-            }`,
+            }&key=${process.env.TRELLO_API}&token=${process.env.TRELLO_TOKEN}`,
             {
                 method: 'POST',
             },
