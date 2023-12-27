@@ -1,51 +1,66 @@
-import Image from 'next/image';
+import {Cpu, InfinityIcon, PhoneOff, PiggyBank, Smile} from 'lucide-react';
 
 const BenefitsSection = () => {
     return (
-        <section id={'benefits'} className="py-20 flex flex-col justify-center items-center gap-16 relative">
+        <section
+            id={'benefits'}
+            className="py-20 pt-40 flex flex-col justify-center items-center gap-20 relative"
+        >
             <p className="font-bold text-3xl md:text-5xl text-center max-w-[800px]">
                 {'TalentHunting replace all expensive agencies'}
             </p>
-            <div className="grid lg:grid-cols-2 gap-20 lg:gap-4">
-                <div className='flex items-center'>
-                    <Image
-                        src={'/grow.svg'}
-                        alt={'Grow of your business'}
-                        width={600}
-                        height={600}
-                        className="w-auto h-auto"
-                    />
+            <div className="flex justify-around gap-16 flex-wrap">
+                <div className="flex flex-col gap-2">
+                    <PhoneOff className="w-12 h-12" />
+                    <div className="font-bold text-2xl">
+                        {'Don’t have time for call’s?'}
+                    </div>
+                    <div className="max-w-[260px]">
+                        {
+                            'Describe what you need when requesting a new hunt. We only call in emergencies or on request.'
+                        }
+                    </div>
                 </div>
-                <div className="flex flex-col gap-8">
-                    <div className="flex flex-col gap-4">
-                        <p className="text-3xl text-[24px] font-bold">
-                            {'Don’t have time for call’s?'}
-                        </p>
-                        <p className="text-xl">
-                            {
-                                'Describe what you need when requesting a new hunt. We only call in emergencies or on request.'
-                            }
-                        </p>
+                <div className="flex flex-col gap-2">
+                    <Smile className="w-12 h-12" />
+                    <div className="font-bold text-2xl">{'Satisfy guarantee'}</div>
+                    <div className="max-w-[260px]">
+                        {
+                            'We guarantee to find the best candidate for your position and work until you are fully satisfied.'
+                        }
                     </div>
-                    <div className="flex flex-col gap-4">
-                        <p className="text-3xl text-[24px] font-bold">
-                            {'Satisfy guarantee'}
-                        </p>
-                        <p className="text-xl">
-                            {
-                                'We guarantee to find the best candidate for your position and work until you are fully satisfied.'
-                            }
-                        </p>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <InfinityIcon className="w-12 h-12" />
+                    <div className="font-bold text-2xl">
+                        {'Invite unlimited members'}
                     </div>
-                    <div className="flex flex-col gap-4">
-                        <p className="text-3xl text-[24px] font-bold">
-                            {'Invite unlimited members'}
-                        </p>
-                        <p className="text-xl">
-                            {
-                                'Invite everyone from your team to make them updated with our work.'
-                            }
-                        </p>
+                    <div className="max-w-[260px]">
+                        {
+                            'Invite everyone from your team to make them updated with our work.'
+                        }
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <PiggyBank className="w-12 h-12" />
+                    <div className="font-bold text-2xl">
+                        {'Cheaper than HR employee'}
+                    </div>
+                    <div className="max-w-[260px]">
+                        {
+                            'Avoid burning your money when you dont have enough work for empoloyee. We are cheaper and u can pause your subscribtion.'
+                        }
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <Cpu className="w-12 h-12" />
+                    <div className="font-bold text-2xl">
+                        {'Technical interviews'}
+                    </div>
+                    <div className="max-w-[260px]">
+                        {
+                            'For technical positions, we also offer technical checks by experienced partners.'
+                        }
                     </div>
                 </div>
             </div>

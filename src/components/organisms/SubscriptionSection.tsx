@@ -1,101 +1,102 @@
 import PricingButton from '~components/atoms/PricingButton';
-import BentoBox from '~components/molecues/BentoBox';
 
 const SubscriptionSection = () => {
     return (
-        <section id="pricing" className="py-40">
-            <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-[118px_117px_232px_232px_235px] gap-4">
-                <BentoBox className="lg:col-span-2 font-bold text-2xl sm:text-3xl lg:text-5xl flex items-center justify-center p-4 lg:p-0">
-                    {'Subscription Offers'}
-                </BentoBox>
-                <BentoBox className="lg:col-span-2 lg:row-span-2 p-6 flex flex-col justify-between">
-                    <p className="text-xl sm:text-3xl font-semibold">
-                        {'Have Questions?'}
-                    </p>
-                    <p className="sm:text-2xl max-w-[440px] py-6 lg:py-0">
-                        {
-                            'Learn more about how TalentHunt work and how we can help your business'
-                        }
-                    </p>
-                    <p className="sm:text-2xl font-medium">{'Book a call'}</p>
-                </BentoBox>
-                <BentoBox className="lg:col-span-2 lg:row-span-2 py-4 px-6 flex flex-col justify-between relative">
-                    <p className="text-3xl font-bold">{'Standard'}</p>
-                    <div className="flex flex-col gap-3 lg:text-xl 2xl:text-2xl py-6 lg:p-0">
-                        <p>{'Unlimited requests.'}</p>
-                        <p>{'Satisfy guarantee.'}</p>
-                        <p>{'Team members.'}</p>
-                        <p>{'Pause or cancel any time.'}</p>
+        <section id="pricing" className="py-20 flex flex-col gap-20">
+            <div className="w-full flex gap-16 justify-around flex-wrap">
+                <div className="bg-white bg-opacity-80 w-full max-w-[430px] flex flex-col items-center p-8 border border-mainBlue border-opacity-20 rounded-lg gap-6 shadow-lg">
+                    <div className="text-2xl font-bold">{'Standard'}</div>
+                    <div className="text-center flex flex-col w-full">
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Unlimited requests.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Satisfy guarantee.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Infinite team members.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Pause or cancel any time.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Initial technical checks.'}
+                        </div>
+                        <div className=" py-3">
+                            {'Candidates from our talent base'}
+                        </div>
                     </div>
-                    <div className="mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]">
+                    <div className="flex-1" />
+                    <div className="text-5xl font-bold text-mainBlue">
                         {'999$/m'}
                     </div>
                     <PricingButton
                         lookup="standard_talenthunt_price"
-                        className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]"
+                        className="w-full rounded-full bg-mainBlue text-white text-2xl font-bold p-4 mt-6 shadow-lg"
                     >
                         {'Start today'}
                     </PricingButton>
-                </BentoBox>
-                <BentoBox className="grid-area-3 flex flex-col gap-2 justify-center items-center p-6 font-bold">
-                    <p className="text-xl sm:text-2xl ">{'IT Talents'}</p>
-                    <p className="text-mainBlue text-4xl sm:text-6xl">{'5000+'}</p>
-                    <p className="text-xl sm:text-2xl">{'in our base'}</p>
-                </BentoBox>
-                <BentoBox className="grid-area-4 flex items-center justify-center p-4">
-                    <p className="text-xl sm:text-2xl font-bold max-w-[190px] text-center">
-                        {`We are `}
-                        <span className="text-mainBlue">{`cheaper `}</span>{' '}
-                        {`than one `}
-                        <span className="text-mainBlue">{`HR employee`}</span>
-                    </p>
-                </BentoBox>
-                <BentoBox className="lg:col-span-2 lg:row-span-2 py-4 px-6 flex flex-col justify-between relative">
-                    <p className="text-3xl font-bold">{'Platinum'}</p>
-                    <div className="flex flex-col gap-3 lg:text-xl 2xl:text-2xl py-6 lg:p-0">
-                        <p>{'Unlimited requests.'}</p>
-                        <p>{'Satisfy guarantee.'}</p>
-                        <p>{'Team members.'}</p>
-                        <p>{'Pause or cancel any time.'}</p>
-                        <p>{'Quicker recruitment process.'}</p>
-                        <p>{'Priority for candidates from our talent base.'}</p>
+                </div>
+                <div className="bg-white bg-opacity-80 w-full max-w-[430px] flex flex-col items-center p-8 border border-mainBlue rounded-lg  gap-6 shadow-lg">
+                    <div className="text-2xl font-bold">{'Platinum'}</div>
+                    <div className="text-center flex flex-col w-full">
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Unlimited requests.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Satisfy guarantee.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Infinite team members.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Pause or cancel any time.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Detailed technical checks.'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Candidates from our talent base'}
+                        </div>
+                        <div className="border-b border-b-black border-opacity-10 py-3">
+                            {'Quicker recruitment process.'}
+                        </div>
+
+                        <div className="py-3">
+                            {'Priority for candidates from our talent base.'}
+                        </div>
                     </div>
-                    <div className="mb-4 lg:mb-0 md:absolute text-mainBlue text-4xl sm:text-7xl font-bold md:right-[24px] md:top-[16px]">
+                    <div className="text-5xl font-bold text-mainBlue">
                         {'1999$/m'}
                     </div>
+
                     <PricingButton
                         lookup="platinum_talenthunt_price"
-                        className="p-5 w-100 bg-mainBlue text-xl sm:text-3xl font-medium text-white rounded-br-[17px] rounded-bl-[17px]"
+                        className="w-full rounded-full bg-mainBlue text-white text-2xl font-bold p-4 mt-6 shadow-lg"
                     >
                         {'Start today'}
                     </PricingButton>
-                </BentoBox>
-                <BentoBox className="grid-area-5 p-4 flex items-center justify-center">
-                    <p className="text-xl sm:text-2xl font-bold text-center">
-                        {`Includes `}
-                        <span className="text-mainBlue">{`technical interviews `}</span>
-                        {`for IT and developers`}
-                    </p>
-                </BentoBox>
-                <BentoBox className="grid-area-6 p-4 flex justify-center items-center">
-                    <div className="flex flex-col text-center">
-                        <p className="text-mainBlue font-bold text-2xl sm:text-3xl">
-                            {'FIXED PRICE'}
-                        </p>
-                        <p className="font-medium text-xl sm:text-2xl">
-                            {'Pay the same fixed price each month.'}
-                        </p>
+                </div>
+            </div>
+            <div className="flex justify-around flex-wrap gap-20">
+                <div className="flex flex-col gap-4 max-w-[400px]">
+                    <div className="text-xl font-bold">{'Have Questions?'}</div>
+                    <div>
+                        {
+                            'Learn more about how TalentHunt work and how we can help your business'
+                        }
                     </div>
-                </BentoBox>
-                <BentoBox className="lg:col-span-2 p-6 flex flex-col justify-between">
-                    <p className="text-xl sm:text-3xl font-semibold">
+                    <div className="font-medium">{'Book a call'}</div>
+                </div>
+                <div className="flex flex-col gap-4 max-w-[400px]">
+                    <div className="text-xl font-bold">
                         {'Refer a friend & earn'}
-                    </p>
-                    <p className="sm:text-2xl max-w-[440px] py-6 lg:p-0">
+                    </div>
+                    <div>
                         {'Earn 5% monthly recurring commissions for each referral.'}
-                    </p>
-                    <p className="sm:text-2xl font-medium">{'Join us now'}</p>
-                </BentoBox>
+                    </div>
+                    <div className="font-medium">{'Join us now'}</div>
+                </div>
             </div>
         </section>
     );
