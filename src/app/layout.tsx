@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
         'TalentHunt - Recruitment as a service. Let us handle your recruitment process and find the best talent for your company. All in a subscription model cheaper than an HR employee.',
     icons: {
-        icon: '/next.svg',
+        icon: '/icon.svg',
     },
     openGraph: {
         title: 'TalentHunting - Recruitment as a Service',
