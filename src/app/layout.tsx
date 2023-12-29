@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 
 import '~/styles/globals.css';
 import Navigation from '~components/molecues/Navigation';
+import Footer from '~components/organisms/Footer';
 import SiteBackground from '~components/organisms/SiteBackground';
 import {generalSans} from '~fonts/generalSans';
 
@@ -62,6 +63,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                 <Navigation />
                 {children}
                 <SiteBackground />
+                <Footer />
             </body>
         </html>
     );

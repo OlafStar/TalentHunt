@@ -13,6 +13,7 @@ export const links = [
     {link: '#benefits', name: 'Benefits'},
     {link: '#pricing', name: 'Pricing'},
     {link: '#faq', name: 'FAQs'},
+    {link: '/jobs', name: 'Jobs'},
 ];
 
 const Navigation = () => {
@@ -50,7 +51,8 @@ const Navigation = () => {
 
             setIsScrolling(true);
 
-            const scrolledPast100vh = window.scrollY > window.innerHeight;
+            const scrolledPast100vh =
+                window.scrollY > (pathname === '/' ? window.innerHeight : 50);
             setBgColor(scrolledPast100vh ? 'white' : 'transparent');
 
             scrollTimeout = setTimeout(() => {

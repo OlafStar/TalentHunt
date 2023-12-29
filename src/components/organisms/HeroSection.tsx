@@ -14,7 +14,7 @@ const HeroSection = () => {
                 </span>
                 <Link
                     href="#pricing"
-                    className="mt-12 font-bold py-4 px-16 bg-mainBlue text-white rounded-full"
+                    className="mt-8 font-bold py-4 px-16 bg-mainBlue text-white rounded-full"
                 >
                     {'See plans'}
                 </Link>

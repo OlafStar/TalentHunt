@@ -9,7 +9,7 @@ const BenefitsSection = () => {
             <p className="font-bold text-3xl md:text-5xl text-center max-w-[800px]">
                 {'TalentHunting replace all expensive agencies'}
             </p>
-            <div className="flex justify-around gap-16 flex-wrap">
+            <div className="flex sm:justify-around gap-16 flex-wrap">
                 <div className="flex flex-col gap-2">
                     <PhoneOff className="w-12 h-12" />
                     <div className="font-bold text-2xl">

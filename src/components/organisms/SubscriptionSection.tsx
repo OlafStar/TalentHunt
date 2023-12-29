@@ -4,11 +4,14 @@ const SubscriptionSection = () => {
     return (
         <section id="pricing" className="py-20 flex flex-col gap-20">
             <div className="w-full flex gap-16 justify-around flex-wrap">
-                <div className="bg-white bg-opacity-80 w-full max-w-[430px] flex flex-col items-center p-8 border border-mainBlue border-opacity-20 rounded-lg gap-6 shadow-lg">
+                <div className="bg-white bg-opacity-80 w-full max-w-[430px] flex flex-col items-center p-8 border border-mainBlue rounded-lg gap-6 shadow-lg relative overflow-hidden">
+                    <div className="bg-mainBlue text-white w-[200px] absolute flex items-center justify-center p-1 font-semibold rotate-[-45deg] left-[-50px]">
+                        {'POPULAR'}
+                    </div>
                     <div className="text-2xl font-bold">{'Standard'}</div>
                     <div className="text-center flex flex-col w-full">
                         <div className="border-b border-b-black border-opacity-10 py-3">
-                            {'Unlimited requests.'}
+                            {'1 active recruitment at time'}
                         </div>
                         <div className="border-b border-b-black border-opacity-10 py-3">
                             {'Satisfy guarantee.'}
@@ -37,11 +40,11 @@ const SubscriptionSection = () => {
                         {'Start today'}
                     </PricingButton>
                 </div>
-                <div className="bg-white bg-opacity-80 w-full max-w-[430px] flex flex-col items-center p-8 border border-mainBlue rounded-lg  gap-6 shadow-lg">
+                <div className="bg-white bg-opacity-80 w-full max-w-[430px] flex flex-col items-center p-8 border border-mainBlue border-opacity-20 rounded-lg  gap-6 shadow-lg">
                     <div className="text-2xl font-bold">{'Platinum'}</div>
                     <div className="text-center flex flex-col w-full">
                         <div className="border-b border-b-black border-opacity-10 py-3">
-                            {'Unlimited requests.'}
+                            {'3 active recruitments at time'}
                         </div>
                         <div className="border-b border-b-black border-opacity-10 py-3">
                             {'Satisfy guarantee.'}

@@ -7,7 +7,7 @@ import TextSection from '~components/organisms/TextSection';
 
 export default function Home() {
     return (
-        <main className="relative z-[2] container">
+        <main className="relative z-[2] container scroll-smooth">
             <HeroSection />
             <DescriptionsSection />
             <BenefitsSection />
