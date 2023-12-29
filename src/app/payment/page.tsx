@@ -13,7 +13,7 @@ export default function Payment({searchParams}: {params: any; searchParams: any}
                             'Need Assistance? If there was a problem during the payment process or if you have any questions, please contact us. Our team is ready to assist you with any issues or inquiries.'
                         }
                     </div>
-                    <Link href={'#'} className="font-medium text-xl">
+                    <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="font-medium text-xl">
                         {'Book a call'}
                     </Link>
                 </div>

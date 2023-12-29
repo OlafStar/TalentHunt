@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import PricingButton from '~components/atoms/PricingButton';
 
 const SubscriptionSection = () => {
@@ -89,16 +91,21 @@ const SubscriptionSection = () => {
                             'Learn more about how TalentHunt work and how we can help your business'
                         }
                     </div>
-                    <div className="font-medium">{'Book a call'}</div>
+                    <Link
+                        href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                        className="font-medium"
+                    >
+                        {'Book a call'}
+                    </Link>
                 </div>
                 <div className="flex flex-col gap-4 max-w-[400px]">
                     <div className="text-xl font-bold">
                         {'Refer a friend & earn'}
                     </div>
                     <div>
-                        {'Earn 5% monthly recurring commissions for each referral.'}
+                        {'Earn 5% monthly recurring commissions for each referral. Contact us for referal link.'}
                     </div>
-                    <div className="font-medium">{'Join us now'}</div>
+                    <Link href={`mailto:${process.env.EMAIL}`} className="font-medium">{'Join us now'}</Link>
                 </div>
             </div>
         </section>
