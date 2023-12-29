@@ -18,8 +18,8 @@ export const createStripeSession = async (lookup: string) => {
             },
         ],
         mode: 'subscription',
-        success_url: `${process.env.NEXT_PUBILC_DOMAIN}/payment?success=true&session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${process.env.NEXT_PUBILC_DOMAIN}#pricing`,
+        success_url: `${process.env.DOMAIN}/payment?success=true&session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${process.env.DOMAIN}#pricing`,
     });
 
     if (session.url) {
