@@ -101,7 +101,7 @@ const Navigation = () => {
                         })}
                     </div>
                     <Link
-                        href={`https://${
+                        href={`${
                             process.env.NEXT_PUBLIC_MANAGE_LOGIN_LINK || ''
                         }`}
                         className="hidden sm:flex justify-center items-center font-bold py-3 w-[200px] bg-mainBlue text-white rounded-full"
