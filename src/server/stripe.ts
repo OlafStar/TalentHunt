@@ -4,8 +4,6 @@ import {redirect} from 'next/navigation';
 
 import {stripe} from '~lib/stripe';
 
-const DOMAIN = process.env.NEXT_PUBILC_DOMAIN || 'http://localhost:3000';
-
 export const createStripeSession = async (lookup: string) => {
     const prices = await stripe.prices.list({
         lookup_keys: [lookup],
@@ -20,8 +18,8 @@ export const createStripeSession = async (lookup: string) => {
             },
         ],
         mode: 'subscription',
-        success_url: `${DOMAIN}/payment?success=true&session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${DOMAIN}#pricing`,
+        success_url: `${process.env.NEXT_PUBILC_DOMAIN}/payment?success=true&session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${process.env.NEXT_PUBILC_DOMAIN}#pricing`,
     });
 
     if (session.url) {
