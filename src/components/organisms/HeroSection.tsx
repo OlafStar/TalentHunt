@@ -8,7 +8,8 @@ const HeroSection = () => {
         <section className="flex items-center justify-center h-[100vh]">
             <div className="flex flex-col items-center justify-center">
                 <div
-                    className={`${anton.className} flex flex-col items-center justify-center text-[192px] leading-[100%]`}
+                    className={`${anton.className} flex flex-col items-center justify-center leading-[100%]`}
+                    style={{fontSize: 'clamp(5.25rem, 3.321rem + 9.643vw, 12rem)'}}
                 >
                     <span className="bg-clip-text text-transparent bg-text-gradient">
                         {'TALENT'}
