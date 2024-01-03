@@ -104,7 +104,7 @@ const Navigation = () => {
                         href={`${
                             process.env.NEXT_PUBLIC_MANAGE_LOGIN_LINK || ''
                         }`}
-                        className="hidden sm:flex justify-center items-center font-bold py-3 w-[200px] bg-mainBlue text-white rounded-full"
+                        className="hidden sm:flex justify-center items-center font-bold py-3 w-[200px] bg-text-gradient hover:bg-mainBlue transition-all ease-in-out  text-white rounded-full"
                     >
                         {'Login'}
                     </Link>

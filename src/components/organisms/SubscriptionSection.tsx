@@ -32,7 +32,7 @@ const SubscriptionSection = () => {
                         </div>
                     </div>
                     <div className="flex-1" />
-                    <div className="text-5xl font-bold text-mainBlue">
+                    <div className="text-5xl font-bold bg-clip-text text-transparent bg-text-gradient">
                         {'999$/m'}
                     </div>
                     <PricingButton
@@ -71,7 +71,7 @@ const SubscriptionSection = () => {
                             {'Priority for candidates from our talent base.'}
                         </div>
                     </div>
-                    <div className="text-5xl font-bold text-mainBlue">
+                    <div className="text-5xl font-bold bg-clip-text text-transparent bg-text-gradient">
                         {'1999$/m'}
                     </div>
 
@@ -92,7 +92,7 @@ const SubscriptionSection = () => {
                         }
                     </div>
                     <Link
-                        href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                        href={`mailto:${process.env.NEXT_PUBLIC_EMAIL || 'hello@talenthunting.co'}`}
                         className="font-medium"
                     >
                         {'Book a call'}

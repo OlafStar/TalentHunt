@@ -7,13 +7,13 @@ const TextSection = () => {
                         {`Wondering if `}
                     </p>
                     <p className="text-4xl sm:text-6xl font-semibold">
-                        <span className="text-mainBlue">
+                        <span className="bg-clip-text text-transparent bg-text-gradient">
                             {'TalentHunting is for you'}
                         </span>
                     </p>
                 </div>
                 <p className="text-xlsm:text-3xl">
-                    <span className="text-mainBlue font-semibold">{`Just contact us `}</span>
+                    <span className="bg-clip-text text-transparent bg-text-gradient font-semibold">{`Just contact us `}</span>
                     {`and get more details how our service will help your business.`}
                 </p>
             </div>

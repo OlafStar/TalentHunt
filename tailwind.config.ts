@@ -16,6 +16,11 @@ module.exports = {
             },
         },
         extend: {
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'text-gradient':
+                    'linear-gradient(95deg, #3f47ff -32.78%, rgba(63, 71, 255, 0.5) 129.62%)',
+            },
             screens: {
                 xs: {raw: '(min-width: 440px)'},
             },
